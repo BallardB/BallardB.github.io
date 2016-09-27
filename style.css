@@ -1,0 +1,60 @@
+/* A simple stylesheet  */
+
+body {
+	background-image: url("images/clouds .jpg");
+	background-size: cover;
+}
+
+li {
+	float: top-left;
+	border-right: 1px solid #bbb;
+}
+a {
+	display: block;
+    padding: 0px;
+    float: top-left;
+}
+nav {
+	list-style-type: none;
+    margin: top;
+    padding: 0px;
+    width: 200px;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+    top: 150px;
+    position: fixed;
+}
+
+li a {
+	float: top-left;
+    display: block;
+    color: #000;
+    padding: 16px 32px;
+  
+}
+
+/* Changes the link color to white on hover */
+li a:hover {
+    color: white;
+}
+
+.Headshot {
+	margin-top: 50px;
+	text-align: center;
+	max-height: 20%;
+	max-width: auto;
+}
+
+#photo {
+	max-height: 20%;
+	max-width: auto;
+}
+
+header {
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	line-height: 1000%;
+
+}
