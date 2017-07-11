@@ -4,9 +4,15 @@
 html,
 body {
     height: 100%;
-    margin-top: -5px;
+    margin-top: -15px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
 }
 
+
+section {
+    padding: 60px 0; 
+}
 
 .typed-cursor{
   opacity: 1;
@@ -19,8 +25,11 @@ body {
   100% { opacity:1; }
 }
 
+header .img-src{
+    /*background-attachment: scroll;*/ 
+}
 
-header .heaeder-content-inner {
+header .header-content-inner {
     width: 100%;
 }
 
@@ -28,13 +37,25 @@ header {
     min-height: auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
+    
     -o-background-size: cover;
     background-position: center;
-    background-image: url("../images/background1.jpg");
-    width: 100%;
-    height: 100%;
+    
+    min-width: 100%;
+    height: 107%;
 }
+
+header > .img-src {
+    position: fixed;
+
+    width: 100%;
+    height: 107%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
 header .header-content {
     position: relative;
     width: 100%;
@@ -60,6 +81,244 @@ header .header-content {
     font-size: 30px;
 
 }
+
+.no-gutter>[class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.bio-text{
+    font-weight: 700;
+    color: black;
+    
+    padding-left: 20%;
+    text-align: left;
+}
+
+
+.bio-text h2{
+    font-size: 50px;
+    padding-bottom: 60px;
+}
+
+.bio-text p{
+       font-size: 25px;
+    
+}
+#portfolio-icon{
+    position: relative;
+    bottom: 72px;
+    left: 42%;
+}
+
+.section-heading {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 40px;
+    margin-top: -5px;
+}
+
+
+.img-container {
+    position: relative;
+    display: block;
+    max-width: 650px;
+    margin-left: -15px;
+    margin-right: -15px;
+    z-index: 0;
+    height: auto;
+}
+
+.navbar-default, a {
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    z-index: 999;
+}
+
+.navbar-default {
+    background-color: rgba(43, 41, 42, 0.75);
+    border-color: rgba(34, 34, 34, .05);
+    transition: all .35s;
+    z-index: 999;
+}
+.btn-default, .portfolio-box .portfolio-box-caption {
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+}
+.navbar-default .navbar-header .navbar-brand {
+    color: rgba(255, 255, 255, .7);
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 999;
+}
+.navbar-default .navbar-header .navbar-brand:focus, .navbar-default .navbar-header .navbar-brand:hover {
+    color: #fff;
+    z-index: 999;
+}
+.navbar-default .navbar-header .navbar-toggle {
+    font-weight: 700;
+    font-size: 12px;
+    color: rgba(255, 255, 255, .7);
+    text-transform: uppercase;
+    z-index: 999;
+}
+
+
+
+.navbar-default .nav>li>a, .navbar-default .nav>li>a:focus {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    color: rgba(255, 255, 255, .7);
+    z-index: 999;
+}
+.navbar-default .nav>li>a:focus:hover, .navbar-default .nav>li>a:hover {
+    color: #fff;
+    z-index: 999;
+}
+.navbar-default .nav>li.active>a, .navbar-default .nav>li.active>a:focus {
+    color: #F8EFD5!important;
+    background-color: transparent;
+    z-index: 999;
+}
+.navbar-default .nav>li.active>a:focus:hover, .navbar-default .nav>li.active>a:hover {
+    background-color: transparent;
+    z-index: 999;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+        color: #2B292A;
+    background-color: #F8EFD5;
+    border-color: #2B292A;
+}
+
+
+
+@media (min-width:768px) {
+    .navbar-default {
+    background-color: rgba(34, 34, 34, .50);
+    border-color: rgba(255, 255, 255, .3);
+    z-index: 999;
+}
+.navbar-default .navbar-header .navbar-brand {
+    color: rgba(255, 255, 255, .7);
+    
+    position: absolute;
+    z-index: 999;
+}
+.navbar-default .navbar-header .navbar-brand:focus, .navbar-default .navbar-header .navbar-brand:hover {
+    color: #FFF;
+    z-index: 999;
+}
+.navbar-default .nav>li>a, .navbar-default .nav>li>a:focus {
+    color: rgba(255, 255, 255, .7);
+    z-index: 999;
+}
+.navbar-default .nav>li>a:focus:hover, .navbar-default .nav>li>a:hover {
+    color: #fff;
+    z-index: 999;
+}
+.navbar-default.affix {
+    background-color: #F8EFD5;
+    border-color: rgba(34, 34, 34, .05);
+    z-index: 999;
+}
+.navbar-default.affix .navbar-header .navbar-brand {
+    color: #F05F40;
+    font-size: 14px;
+    z-index: 999;
+}
+.navbar-default.affix .navbar-header .navbar-brand:focus, .navbar-default.affix .navbar-header .navbar-brand:hover {
+    color: #eb3812;
+    z-index: 999;
+}
+.navbar-default.affix .nav>li>a, .navbar-default.affix .nav>li>a:focus {
+    color: #222;
+    z-index: 999;
+}
+.navbar-default.affix .nav>li>a:focus:hover, .navbar-default.affix .nav>li>a:hover {
+    color: #F05F40;
+    z-index: 999;
+}
+
+
+.page-scroll {
+    transition: all .35s!important;
+    -webkit-transition: all .35s!important;
+    -moz-transition: all .35s!important;
+}
+a {
+    transition: all .35s!important;
+    color: #F05F40;
+}
+
+.bg-primary {
+    background-color: #ffffff;
+    position: relative;
+}
+
+.bg-secondary {
+    background-color: #333;
+    position: relative;
+}
+
+.cool-image {
+    background-color: #fff;
+    background-image: url("images/cool-image.jpg");
+
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.portfolio-box {
+    position: relative;
+    display: block;
+    max-width: 650px;
+    margin: 0 auto;
+    z-index: 0;
+}
+.portfolio-box .portfolio-box-caption {
+    color: #fff;
+    opacity: 0;
+    display: block;
+    background: rgba(43, 41, 42, 0.7);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transition: all .35s;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category, .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 15px;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 18px;
+}
+.portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+}
+.portfolio-box:focus {
+    outline: 0;
+}
+
 
 
 /*
