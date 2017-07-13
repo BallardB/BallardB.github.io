@@ -33,6 +33,9 @@ header .header-content-inner {
     width: 100%;
 }
 
+.img-src{
+    min-height: 100%;
+}
 header {
     min-height: auto;
     -webkit-background-size: cover;
@@ -47,7 +50,6 @@ header {
 
 header > .img-src {
     position: fixed;
-
     width: 100%;
     height: 107%;
     background-repeat: no-repeat;
@@ -258,18 +260,28 @@ a {
 }
 
 .bg-secondary {
-    background-color: #333;
-    position: relative;
+    background: #fff url("../images/cool-image.jpg");
+    background-position: 50%;
+    background-attachment: fixed;
+   min-height: 100%;
+
+}
+/* Turn off parallax scrolling for tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1024px) {
+    .bg-secondary {
+        background-attachment: scroll;
+    }
 }
 
 .cool-image {
     background-color: #fff;
-    background-image: url("images/cool-image.jpg");
-
+    background-image: url("../images/cool-image.jpg");
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
+    min-height: 650px;
 }
 
 
