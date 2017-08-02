@@ -357,7 +357,7 @@ header .header-content {
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
-        color: #2B292A;
+    color: #2B292A;
     background-color: #F8EFD5;
     border-color: #2B292A;
 }
@@ -423,6 +423,10 @@ header .header-content {
 .footer-icon{
     margin-right: 15px;
     margin-left: 15px;
+    color: #333;
+    transition: .3s ease;
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
 }
 
 .fa.fa-facebook-square:focus,.fa.fa-facebook-square:hover{
@@ -448,8 +452,9 @@ header .header-content {
 @media (max-width: 767px) {
 
     .bgimg-1, .cool-image{
-        min-width: 105%; 
+        min-width: 105.5%; 
         overflow-x: hidden;
+        background-attachment: scroll;
     }
     .aboutUs-btm:after{
         margin-top: 5px;
@@ -466,13 +471,14 @@ header .header-content {
     #biopic{
         min-width: 101%;
         height: 475px;
+        background-attachment: scroll;
     }
     .bg-primary{
         padding-bottom: 20px;
     }
     footer{
         padding-top: 362px;
-        width: 105%;
+        width: 105.5%;
     }
 
 }
