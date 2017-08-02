@@ -452,7 +452,7 @@ header .header-content {
 @media (max-width: 767px) {
 
     .bgimg-1, .cool-image{
-        min-width: 107%; 
+        min-width: 106%; 
         overflow-x: hidden;
         background-attachment: scroll;
     }
@@ -483,7 +483,7 @@ header .header-content {
     }
     footer{
         padding-top: 362px;
-        width: 105.5%;
+        width: 106%;
     }
 
 }
