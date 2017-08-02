@@ -452,7 +452,7 @@ header .header-content {
 @media (max-width: 767px) {
 
     .bgimg-1, .cool-image{
-        min-width: 105.5%; 
+        min-width: 107%; 
         overflow-x: hidden;
         background-attachment: scroll;
     }
@@ -505,7 +505,8 @@ header .header-content {
 .bg-primary {
     background-color: #ffffff;
     position: relative;
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 
