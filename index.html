@@ -18,14 +18,14 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="screen" />
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 
 
   
   <script src="bootstrap/js/bootstrap.min.js"></script>
-
-  <script src="typed/lib/typed.min.js" type="text/javascript"></script>
-  <script src="portfolio.js" type="text/javascript"></script>
 
 
 
@@ -49,6 +49,7 @@
 </head>
 <body id="page-top">
 
+<div class="page-content">
 <div id="preloader">
   <div class="loader">
   </div>
@@ -72,7 +73,7 @@
 
             <!--  Collect the nav links, forms, and other content for toggling  -->
             <div class="navbar-collapse collapse" id="navitgationbar">
-                <ul class="nav navbar-nav navbar-right" id="navbar-list">
+                <ul class="nav navbar-nav navbar-right" id="navbar-list-collapse">
                     <li>
                         <a data-toggle="collapse" data-target=".navbar-collapse" class="page-scroll" href="#bio">About Me</a> <!-- data-toggle="collapse" data-target=".navbar-collapse" collapses navbar button onclick  -->
                     </li>
@@ -84,6 +85,22 @@
                     </li>
                     
                 </ul>
+
+                <ul class="nav navbar-nav navbar-right" id="navbar-list">
+                    <li>
+                        <a class="page-scroll aboutMe-li" href="#bio">About Me</a> <!-- collapses navbar button onclick  -->
+                    </li>
+                    <li>
+                        <a class="page-scroll portfolio-li" href="#portfolio">Portofilio</a> <!-- collapses navbar button onclick  -->
+                    </li>
+                    <li>
+                        <a class="page-scroll contactInfo-li" href="#page-bottom">Contact Info</a>
+                    </li>
+                    
+                </ul>
+
+
+
             </div>
             <!--  /.navbar-collapse  -->
         </div>
@@ -113,11 +130,14 @@
 
 
 
+  <!-- <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="2880" height="2600"> </canvas> -->
+<!--   <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="2880" height="926"></canvas> -->
+
 <section class="bg-primary" id="bio">
   <div class="container">
     <div class="row no-gutter">
       <div class="col-md-4 col-sm-6">
-        <div class="img-container"> 
+        <div class="img-container biopic animation-elements" style="z-index: 100;"> 
           <img class="img-responsive" src="images/biopic.jpg"
           alt="Picture of Ballard Blair in Portugal with colorful tiles" id="biopic">
         </div>
@@ -125,86 +145,113 @@
 
       <div class="col-md-8 col-sm-6 text-center">
       <div class="bio-text">           
-        <h2 class="aboutUs"> About Me.</h2>
+        <h2 class="aboutUs">About Me.</h2>
         <div class="aboutUs-btm"></div>
           <!-- <hr class="light"/> -->
           
-            <p item class="text-faded">Hi! My name is Ballard Glenn Blair and I am an independent, web-developer. I am currently a senior at Tufts University pursuing a degree in Computer Science. I love to go outside, to explore, and to travel.  </p>
+            <p item class="text-faded">Hi! My name is Ballard Glenn Blair and I am an independent web-developer. I am currently a senior at Tufts University pursuing a degree in Computer Science. I love to go outside, to explore, and to travel.  </p>
             
       </div>
       </div>
-    </div> <!-- End Row  -->
-  </div> <!-- End Container -->
+    </div> 
+    <!-- End Row  -->
+  </div> 
+  <!-- End Container -->
 </section>
 
 
 
 <section class="cool-image2">
 <div class="cool-image" id="portfolio">
- <div class="container">
-    <h2 class="myPortfolio text-center"> My Portfolio.</h2>
-        <div class="myPortfolio-btm text-center"></div>
-    <div class="row" id="cool-image-row">
-      <div class="col-md-4 col-sm-6">
+ <div class="container-fluid">
+    <h2 class="myPortfolio"> Portfolio.</h2>
+        <div class="myPortfolio-btm"></div>
+    <div class="row card-row">
+      
 
-          <a class="portfolio-box">
-            <img src="images/valorspirits.png" class="img-responsive past-work"/>
-              <div class="portfolio-box-caption">
-              Valor Spirits 
-                <div class="portfolio-box-caption-content">
-                Built a website for Valor Spirits liquor company using HTML, CSS and Bootstrap.
-                <div class="project-name">
 
-                  
-                </div>
-                </div>
-              </div>
-                 <a type="button" class="btn btn-default" id="portfolio-icon" href="http://americanvalorspirits.com/">Visit Site</a>
-            </a>
+      <!-- Start Card -->
+      <div class="col-md-4 col-sm-4 card">
+        <a href="http://americanvalorspirits.com/" class="card-links">
+          <div class="card-img" style="background-image: url('images/valorspirits.png');"> </div>
+          <div class="card-content">
+            <div class="tags">
+              <div class="tag">UI/UX</div>
+              <div class="tag">HTML</div>
+              <div class="tag">CSS</div>
+              <div class="tag">Bootstrap</div>
+            </div>
+            <h4>Valor Spirits</h4>
+          </div>
+        </a>
             
-
       </div>
-      <div class="col-md-4 col-sm-6">
-
-          <a class="portfolio-box">
-            <img src="images/questionquail.png" class="img-responsive past-work" alt="Beautiful grassland farm in Illinois"/>
-              <div class="portfolio-box-caption">
-              QuestionQuail
-                <div class="portfolio-box-caption-content">
-                Developed the back-end for my Web Development class final group project.
-                <div class="project-name">
-                  
-                </div>
-                </div>
-              </div>
-                <a type="button" class="btn btn-default" id="portfolio-icon" href="https://questionquail.herokuapp.com/">Visit Site</a>
-              
-            </a>
+      <!-- End Card  -->
+            <!-- Start Card -->
+      <div class="col-md-4 col-sm-4 card">
+        <a href="questionquail.herokuapp.com" class="card-links">
+          <div class="card-img" style="background-image: url('images/questionquail.png'); background-position-y:30px;"> </div>
+          <div class="card-content">
+            <div class="tags">
+              <div class="tag">Backend</div>
+              <div class="tag">NodeJs</div>
+              <div class="tag"></div>
+              <div class="tag"></div>
+            </div>
+            <h4>QuestionQuail</h4>
+          </div>
+        </a>
+            
       </div>
-      <div class="col-md-4 col-sm-6">
-
-          <a class="portfolio-box">
-            <img src="images/scancafe.png" class="img-responsive past-work" alt="Beautiful grassland farm in Illinois"/>
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                Currently re-designing site for <br> Scancafe using HTML, CSS and Bootstrap.
-                <div class="project-name">
-                  
-                </div>
-                </div>
-              </div>
-              <a type="button" class="btn btn-default" id="portfolio-icon" href="" style="left: 32%;">Coming Soon!</a>
-            </a>
+      <!-- End Card  -->
+            <div class="col-md-4 col-sm-4 card">
+              <!-- <a href="" class="card-links"> -->
+          <div class="card-img" style="background-image: url('images/scancafe.png');"> </div>
+          <div class="card-content">
+            <div class="tags">
+              <div class="tag">UI/UX</div>
+              <div class="tag">HTML</div>
+              <div class="tag">CSS</div>
+              <div class="tag">Bootstrap</div>
+            </div>
+            <h4>Scancafe<span class="inner">-Coming Soon!</span></h4>
+          </div>
+        </a>
+            
       </div>
+      <!-- End Card  -->
 
-      
-      
-    </div> <!-- End Row  -->
+      </div> <!-- End Row  -->
+      <br>
+      <br>
+      <div class="row card-row" id="cool-image-row">
+                  <!-- Start Card -->
+   <!--    <div class="col-md-4 col-sm-4 card">
+        <a href="http://americanvalorspirits.com/" class="card-links">
+          <div class="card-img" style="background-image: url('images/scancafe.png');"> </div>
+          <div class="card-content">
+            <div class="tags">
+              <div class="tag">UI/UX</div>
+              <div class="tag">HTML</div>
+              <div class="tag">CSS</div>
+              <div class="tag">Bootstrap</div>
+            </div>
+            <h4>Scancafe</h4>
+          </div>
+        </a>
+             -->
+      </div>
+      <!-- End Card  -->
+       
+      </div> <!-- End Row  -->
+    
   </div> <!-- End Container -->
-  </div>
+
 </section>
 
- 
+
+
+ <section>
 <footer class="container-fill text-center" >
   <div class="footer-wrapper container-fluid">
     <div class="footer-content"> 
@@ -222,17 +269,21 @@
         <a class="footer-icon" href="https://www.linkedin.com/in/ballardgb" title="LinkedIn"><i class="fa fa-linkedin-square fa-3x sr-contact footer-icon"></i></a>
         <a class="footer-icon" href="mailto:glenn.blair92@gmail.com" title="Email"><i class="fa fa-envelope-square fa-3x sr-contact footer-icon"></i></a>
         <a class="footer-icon" href="https://www.instagram.com/glenncoco420/" title="Instagram"><i class="fa fa-instagram fa-3x sr-contact footer-icon"></i></a>
-        
     </div>
-      
     </div>
+  <div style="margin: 0px; padding: 0px;">
+  <p class="clock-box" ><span id="lil-clock-hours">04</span><span class="blinking-cursor">:</span><span id="lil-clock-min">20</span><i class="fa fa-smile-o clock-smile"></i></p>
+    
+  </div>
+
   </div>
     
   </div>
 
 </footer>
+</section>
 
-
+<div id="particles-js"></div>
  <script>
   document.addEventListener('DOMContentLoaded', function(){
 
@@ -259,5 +310,13 @@
 
   });
 </script>
+  <script src="typed/lib/typed.min.js" type="text/javascript"></script>
+   <script src="particles.js/particles.min.js" type="text/javascript"></script>
+
+   <!-- Custom JS -->
+  <script src="portfolio.js" type="text/javascript"></script>
+
+
+
 </body>
 </html>
