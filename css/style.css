@@ -252,7 +252,7 @@ z-index: 100;
     border-top-width: 2px;
     margin-bottom: 35px;
     margin-top: 30px;
-    color: #333;
+    color: #c32b3a;
 }
 
 .bio-text{
@@ -459,9 +459,10 @@ header .header-content {
     box-shadow: 0 0 6px 0 rgba(30,45,62,.09);
     transition: box-shadow .2s;
     height: 350px;
+    width: 390px;
     padding: 0px;
     margin-right: 3%;
-    margin-left: 3%;
+    
     z-index: 100;
 }
 
@@ -474,12 +475,13 @@ header .header-content {
 
 .card:hover .card-img{
 
-opacity: .9;
+    opacity: .9;
+    transition: all .3s ease;
 }
 
 .card-row{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding-bottom: 10px;
 }
 
@@ -552,8 +554,8 @@ opacity: .9;
     position: relative;
     display: block;
     max-width: 650px;
-    margin-left: -15px;
-    margin-right: -15px;
+/*    margin-left: -15px;
+    margin-right: -15px;*/
     z-index: 0;
     height: auto;
 }
@@ -677,14 +679,17 @@ opacity: .9;
     justify-content: center;
     align-items: center;
 }
+.footer-icons a {
+    color: #333;
+}
 
 .footer-icon{
     margin-right: 15px;
     margin-left: 15px;
-    color: #333;
+    color: #333!important;
     transition: .3s ease;
-    -webkit-transition: .35s;
-    -moz-transition: .35s;
+    -webkit-transition: .35s ease;
+    -moz-transition: .35s ease;
 }
 
 .fa.fa-facebook-square:focus,.fa.fa-facebook-square:hover{
