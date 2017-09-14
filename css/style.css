@@ -6,7 +6,6 @@
     reddish color #c32b3a
 
 */
-
 html,
 body {
     height: 100%;
@@ -18,6 +17,10 @@ body {
     padding: 0px;*/
     /*overflow-x: hidden; */
 }
+h2{
+  font-family: 'Josefin Slab', serif;
+  font-weight: 700;
+}
 
 #preloader{
     position: fixed;
@@ -26,15 +29,17 @@ body {
     height: 100%;
     width: 100%;
     background: #ffffff;
-    z-index: 999;
+    z-index: 1000;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     transition: all .5s ease;
+    z-index: 1000;
 }
 
 body.loaded #preloader {
     opacity: 0;
     visibility: hidden;
+    z-index: 0;
 }
 
 .loader {
@@ -202,6 +207,10 @@ header .img-src {
     background-position: center center;
 }*/
 
+.col-md-4, .col-sm-6{
+  z-index: 1;
+}
+
 /* ---- particles.js container ---- */
 
 #particles-js {
@@ -213,10 +222,11 @@ header .img-src {
   background-size: cover;
   background-position: 50% 50%;
   z-index: 0;
+  /*display: none;*/
 
 }
 #particles-js canvas {
-    height: 1237px!important;
+    height: 1528px !important;
 }
 
 #biopic{ 
@@ -242,6 +252,11 @@ z-index: 100;
     text-align: left;
 }
 
+.btm-dash{
+
+    color: #c32b3a!important;
+}
+
 .myPortfolio-btm:after{
     content: "";
     text-align: left;
@@ -256,7 +271,7 @@ z-index: 100;
 }
 
 .bio-text{
-    font-weight: 700;
+    font-weight: 550;
     color: #333;
     padding-left: 20%;
     text-align: left;
@@ -272,6 +287,7 @@ z-index: 100;
 
 .bio-text p{
        font-size: 14px;
+       font-weight: 400;
     
 }
 
@@ -447,13 +463,156 @@ header .header-content {
     background-color: #fff;
 }
 
+.col-md-4, .col-sm-6 {
+  padding-left: 0px;
+}
 
 .no-gutter>[class*=col-] {
     padding-right: 0;
     padding-left: 0;
 }
 
+/* entire container, keeps perspective */
+.card-container {
+      -webkit-perspective: 800px;
+   -moz-perspective: 800px;
+     -o-perspective: 800px;
+        perspective: 800px;
+        margin-bottom: 30px;
+}
+/* flip the pane when hovered */
+.card-container:not(.manual-flip):hover .card,
+.card-container.hover.manual-flip .card{
+    -webkit-transform: rotateY( 180deg );
+-moz-transform: rotateY( 180deg );
+ -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+
+.card-container.static:hover .card,
+.card-container.static.hover .card {
+    -webkit-transform: none;
+-moz-transform: none;
+ -o-transform: none;
+    transform: none;
+}
+/* flip speed goes here */
 .card {
+     -webkit-transition: -webkit-transform .5s;
+   -moz-transition: -moz-transform .5s;
+     -o-transition: -o-transform .5s;
+        transition: transform .5s;
+-webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+     -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    position: relative;
+        width: 390px;
+        height: 330px;
+}
+
+.portfolio-card{
+    margin-right: 25px;
+}
+
+.front:hover, .back:hover {
+    box-shadow: 0 10px 15px 0 rgba(30,45,62,.5), 0 0 50px 0 rgba(31,44,60,.5);
+    transition: all .3s ease;
+  }
+
+/* hide back of pane during swap */
+.front, .back {
+    -webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+     -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+    width: 390px;
+    height: 330px;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+        -webkit-transform: rotateY( 180deg );
+   -moz-transform: rotateY( 180deg );
+     -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+        z-index: 3;
+}
+
+.back .btn-simple{
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+}
+
+.icons-wrapper {
+  padding-left: 23%;
+
+}
+
+.url-links:hover, .back-icons:hover, .icons-wrapper:hover {
+  color: #333;
+  text-decoration: none;
+
+}
+
+.url-links{
+  font-size: 30px;
+  padding-left: 45%;
+}
+
+.back-icons{
+  font-size: 20px!important;
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+
+}
+
+.rotate-icons:hover {
+   -webkit-transform: rotateY( 360deg );
+   -moz-transform: rotateY( 360deg );
+     -o-transform: rotateY( 360deg );
+        transform: rotateY( 360deg );
+        color: #c32b3a;
+
+}
+
+
+.card-back-content { 
+    padding-top: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+
+
+/*.card {
+     -webkit-transition: -webkit-transform .5s;
+   -moz-transition: -moz-transform .5s;
+     -o-transition: -o-transform .5s;
+        transition: transform .5s;
+-webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+     -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    position: relative;
+}
+
+*/
+.card-wrapper {
     border-radius: 3px;
     background-color: #fff;
     box-shadow: 0 0 6px 0 rgba(30,45,62,.09);
@@ -462,11 +621,36 @@ header .header-content {
     width: 390px;
     padding: 0px;
     margin-right: 3%;
-    
-    z-index: 100;
+    /*z-index: 100;*/
+
+}
+/* flip the pane when hovered */
+/*.card-container:not(.manual-flip):hover .card,
+.card-container.hover.manual-flip .card{
+    -webkit-transform: rotateY( 180deg );
+-moz-transform: rotateY( 180deg );
+ -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
 }
 
-.card:hover {
+
+.card-container.static:hover .card,
+.card-container.static.hover .card {
+    -webkit-transform: none;
+-moz-transform: none;
+ -o-transform: none;
+    transform: none;
+}
+
+.card-container {
+      -webkit-perspective: 800px;
+   -moz-perspective: 800px;
+     -o-perspective: 800px;
+        perspective: 800px;
+        margin-bottom: 30px;
+}*/
+
+/*.card:hover {
     box-shadow: 0 10px 15px 0 rgba(30,45,62,.5), 
                 0 0 50px 0 rgba(31,44,60,.5);
     
@@ -477,10 +661,10 @@ header .header-content {
 
     opacity: .9;
     transition: all .3s ease;
-}
+}*/
 
 .card-row{
-    display: flex;
+    
     justify-content: flex-start;
     padding-bottom: 10px;
 }
@@ -509,6 +693,46 @@ header .header-content {
 .card-content>h4>.inner{
     font-size: 18px;
 }
+/*
+.back {
+        -webkit-transform: rotateY( 180deg );
+   -moz-transform: rotateY( 180deg );
+     -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+         -webkit-backface-visibility: initial;
+   -moz-backface-visibility: initial;
+     -o-backface-visibility: initial;
+        backface-visibility: initial;
+        z-index: 3;
+}
+.front {
+    z-index: 2;
+ -webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+     -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+}
+
+.front, .back {
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+}
+
+
+
+
+
+
+
+
+
+
+*/
+
 
 .tags{
     display: flex;
@@ -686,7 +910,7 @@ header .header-content {
 .footer-icon{
     margin-right: 15px;
     margin-left: 15px;
-    color: #333!important;
+    color: #333;
     transition: .3s ease;
     -webkit-transition: .35s ease;
     -moz-transition: .35s ease;
@@ -993,6 +1217,30 @@ a {
   0% { opacity:1; }
   50% { opacity:0.25; }
   100% { opacity:1; }
+}
+
+
+
+/*       Fix bug for IE      */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .front, .back{
+        -ms-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    .back {
+        visibility: hidden;
+        -ms-transition: all 0.2s cubic-bezier(.92,.01,.83,.67);
+    }
+    .front{
+        z-index: 4;
+    }
+    .card-container:not(.manual-flip):hover .back,
+    .card-container.manual-flip.hover .back{
+        z-index: 5;
+        visibility: visible;
+    }
 }
 
 /*
