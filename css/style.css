@@ -294,7 +294,6 @@ z-index: 100;
 .bgimg-1{
     background-image: url("../images/background1.jpg");
     min-height: 100%;
-
 }
 
 .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -997,16 +996,23 @@ header .header-content {
         padding-left: 10%;
         text-align: center;
     }
+
+    .biopic{ 
+      opacity: 1;
+      transition: none; 
+      transform: none;
+    }
     #biopic{
         min-width: 101.2%;
         height: 475px;
-        background-attachment: scroll;
+        margin-top: 15px;
+      margin-left: 9px;
     }
     .bg-primary{
         padding-bottom: 20px;
     }
     footer{
-        padding-top: 362px;
+        /*padding-top: 362px;*/
         width: 106%;
     }
 
@@ -1015,6 +1021,10 @@ header .header-content {
 
 /* When navbar expands */
 @media (min-width:768px) {
+
+
+
+
 
 #navbar-list-collapse{
     display: none;

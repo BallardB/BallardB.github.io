@@ -83,7 +83,9 @@ function check_if_in_view() {
     //   (element_top_position <= window_bottom_position)) {
 
 
-//    About Me Scroll Section
+// If on mobile, don't have scrolling effects
+    if ($(window).width() > 479) {
+      //    About Me Scroll Section
       if ((window_top_position >= 482) && (window_top_position <=1435)){
       $('.biopic').addClass('in-view');
       $('.aboutMe-li').addClass('in-view');
@@ -105,6 +107,7 @@ function check_if_in_view() {
     } else {
       $('.contactInfo-li').removeClass('in-view');
     }
+  }
   
 }
 $window.on('scroll resize', check_if_in_view);
