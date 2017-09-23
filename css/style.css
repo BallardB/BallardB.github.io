@@ -975,7 +975,7 @@ header .header-content {
     }
 
     .bgimg-1, .cool-image{
-        min-width: 106%; 
+        min-width: 122%; 
         overflow-x: hidden;
         background-attachment: scroll;
     }
@@ -1006,14 +1006,15 @@ header .header-content {
         min-width: 101.2%;
         height: 475px;
         margin-top: 15px;
-      margin-left: 9px;
+      
     }
     .bg-primary{
         padding-bottom: 20px;
+        min-width: 120%;
     }
     footer{
         /*padding-top: 362px;*/
-        width: 106%;
+        width: 122%;
     }
 
 }
@@ -1252,6 +1253,12 @@ a {
         visibility: visible;
     }
 }
+
+/** {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}*/
 
 /*
 header .header-content .header-content-inner hr {
