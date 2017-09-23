@@ -588,6 +588,9 @@ header .header-content {
 
 }
 
+i.fa.rotate-icons{
+  color: #c32b3a;
+}
 
 .card-back-content { 
     padding-top: 30px;
@@ -783,6 +786,13 @@ header .header-content {
     height: auto;
 }
 
+
+
+
+.navbar-collapse {
+  text-align: center;
+}
+
 .navbar-default, a {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -841,7 +851,7 @@ header .header-content {
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
     color: #2B292A;
-    background-color: #F8EFD5;
+    background-color: #c32b3a;
     border-color: #2B292A;
 }
 
@@ -970,9 +980,22 @@ header .header-content {
 /* When nav-bar gets condensed  */
 @media (max-width: 767px) {
 
+  #portfolio {
+    width: 122%;
+  }
+  .myPortfolio {
+    text-align: center;
+  }
+  .myPortfolio-btm{
+    text-align: center;
+  }
     #navbar-list{
         display: none;
-    }
+  }
+
+  a.icons-wrapper {
+    color: #c32b3a;
+  }
 
     .bgimg-1, .cool-image{
         min-width: 122%; 
@@ -989,12 +1012,17 @@ header .header-content {
     .bio-text h2{
         margin-top: 20px;
         text-align: center;
+        font-size: 50px;
 
     }
+    .bio-text p {
+      font-size: 20px;
+    }
     .bio-text {
-        padding-right: 10%;
-        padding-left: 10%;
+        padding-right: 5%;
+        padding-left: 5%;
         text-align: center;
+        font-size: 25px;
     }
 
     .biopic{ 
